@@ -8,7 +8,7 @@ import com.zerox.navi.Navi
 import com.zerox.navi.NaviView
 
 class MainActivity : AppCompatActivity() {
-    val items by lazy {
+    private val items by lazy {
         listOf(
             Navi.Item(
                 title = "Dashboard",
@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    val navController by lazy { findNavController(R.id.nav_host_fragment_activity_main) }
-    val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private val navController by lazy { findNavController(R.id.nav_host_fragment_activity_main) }
+    private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
-    val navi: NaviView by lazy { binding.navView }
+    private val navi: NaviView by lazy { binding.navView }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

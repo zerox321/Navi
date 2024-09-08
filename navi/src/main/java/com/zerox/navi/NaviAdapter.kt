@@ -2,7 +2,6 @@ package com.zerox.navi
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.zerox.navi.databinding.NaviNoTitleRowBinding
@@ -98,12 +97,12 @@ class NaviAdapter internal constructor(
         }
     }
 
-    fun ImageView.attachIcons(
+    fun CheckableImageView.attachIcons(
         icon: Int,
         isSelected: Boolean,
     ) {
         setImageResource(icon)
-        this.isSelected = isSelected
+        this.isChecked = isSelected
     }
 
     fun TextView.attachText(
