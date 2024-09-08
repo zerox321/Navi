@@ -70,4 +70,13 @@ class NaviView : FrameLayout {
         viewBinding.naviView.layoutManager =
             GridLayoutManager(context, items.size, getLayoutOrientation(), false)
     }
+
+    fun updateCount(
+        destination: Int,
+        count: Int,
+    ) {
+        viewBinding.naviView.adapter?.let { adapter ->
+            (adapter as NaviAdapter).updateCount(destination = destination, count = count)
+        }
+    }
 }

@@ -2,10 +2,13 @@ package com.zerox.bottom
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import com.zerox.bottom.databinding.ActivityMainBinding
 import com.zerox.navi.Navi
 import com.zerox.navi.NaviView
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private val items by lazy {
@@ -36,5 +39,9 @@ class MainActivity : AppCompatActivity() {
             navController = navController,
             items = items,
         )
+        lifecycleScope.launch {
+            delay(5000)
+            navi.updateCount(R.id.navigation_dashboard, 10)
+        }
     }
 }

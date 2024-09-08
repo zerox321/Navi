@@ -3,6 +3,7 @@ package com.zerox.navi
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.zerox.navi.databinding.NaviNoTitleRowBinding
 import com.zerox.navi.databinding.NaviRowBinding
@@ -82,6 +83,7 @@ class NaviAdapter internal constructor(
             isSelected: Boolean,
         ) {
             bindingNaviRowBinding.titleTv.attachText(title = item.title, isSelected = isSelected)
+            bindingNaviRowBinding.countTv.attachCountText(count = item.count)
             bindingNaviRowBinding.iconIv.attachIcons(icon = item.icon, isSelected = isSelected)
         }
     }
@@ -115,5 +117,19 @@ class NaviAdapter internal constructor(
         } else {
             setTextColor(nonSelectedColor)
         }
+    }
+
+    fun TextView.attachCountText(count: Int) {
+        text = count.toString()
+        isVisible = count > 0
+    }
+
+    fun updateCount(
+        count: Int,
+        destination: Int,
+    ) {
+        val item = items.find { it.destination == destination } as? Navi.Item
+        item?.count = count
+        notifyDataSetChanged()
     }
 }

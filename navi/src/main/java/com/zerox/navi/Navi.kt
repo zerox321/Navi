@@ -8,6 +8,7 @@ sealed class Navi {
         val title: String,
         override val icon: Int,
         override val destination: Int,
+        var count: Int = 0,
     ) : Navi()
 
     data class ItemNoTitle(
