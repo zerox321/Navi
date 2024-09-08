@@ -103,10 +103,7 @@ class NaviAdapter internal constructor(
         isSelected: Boolean,
     ) {
         setImageResource(icon)
-        setColorFilter(
-            if (isSelected) selectedColor else nonSelectedColor,
-            android.graphics.PorterDuff.Mode.SRC_IN,
-        )
+        this.isSelected = isSelected
     }
 
     fun TextView.attachText(
