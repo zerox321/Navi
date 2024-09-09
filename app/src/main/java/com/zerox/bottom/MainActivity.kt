@@ -18,7 +18,17 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.ic_dashboard_black_24dp,
                 destination = R.id.navigation_dashboard,
             ),
+            Navi.Item(
+                title = "Dashboard",
+                R.drawable.ic_dashboard_black_24dp,
+                destination = R.id.navigation_dashboard,
+            ),
             Navi.ItemNoTitle(R.drawable.ic_home_black_24dp, destination = R.id.navigation_home),
+            Navi.Item(
+                title = "Notifications",
+                R.drawable.ic_notifications_black_24dp,
+                destination = R.id.navigation_notifications,
+            ),
             Navi.Item(
                 title = "Notifications",
                 R.drawable.ic_notifications_black_24dp,

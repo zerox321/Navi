@@ -128,7 +128,7 @@ class NaviAdapter internal constructor(
         count: Int,
         destination: Int,
     ) {
-        val item = items.find { it.destination == destination } as? Navi.Item
+        val item = items.find { it.destination == destination } as? Navi.Item ?: return
         item?.count = count
         notifyDataSetChanged()
     }
