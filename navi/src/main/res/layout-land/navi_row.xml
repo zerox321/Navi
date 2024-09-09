@@ -5,10 +5,10 @@
     android:id="@+id/container"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginBottom="8dp"
-    android:gravity="center"
+    android:layout_marginHorizontal="@dimen/space8"
+    android:layout_marginBottom="@dimen/space8"
     android:background="?selectableItemBackgroundBorderless"
+    android:gravity="center"
     android:orientation="vertical">
 
 
@@ -16,7 +16,7 @@
         android:id="@+id/icon_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/space8"
         android:src="@drawable/count_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +26,7 @@
         android:id="@+id/title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/thirdFont"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon_iv" />
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/count_bg"
         android:gravity="center"
-        android:padding="4dp"
+        android:padding="@dimen/space4"
         android:textColor="@color/white"
         android:textSize="9sp"
         android:textStyle="bold"
