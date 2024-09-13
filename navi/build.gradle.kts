@@ -53,7 +53,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.zerox"
                 artifactId = "navi"
-                version = "1.0.7"
+                version = "1.0.8"
             }
         }
         repositories {
