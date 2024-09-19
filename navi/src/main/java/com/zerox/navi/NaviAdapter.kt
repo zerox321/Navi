@@ -1,9 +1,9 @@
 package com.zerox.navi
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.zerox.navi.databinding.NaviNoTitleRowBinding
 import com.zerox.navi.databinding.NaviRowBinding
@@ -121,7 +121,7 @@ class NaviAdapter internal constructor(
 
     fun TextView.attachCountText(count: Int) {
         text = count.toString()
-        isVisible = count > 0
+        visibility = if (count > 0) View.VISIBLE else View.INVISIBLE
     }
 
     fun updateCount(
